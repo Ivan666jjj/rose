@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<title>粒子玫瑰 · 花束</title>
+<style>
+  @font-face{
+    font-family:'RoseBrush';
+    src:url(data:font/woff2;base64,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) format('woff2');
+    font-display:block;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;height:100dvh;margin:0;background:#05000c;overflow:hidden;
+    overscroll-behavior:none;-webkit-tap-highlight-color:transparent;
+    -webkit-user-select:none;user-select:none}
+  #gl{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none}
+  .sig{position:fixed;left:20px;bottom:16px;font:11px/1 -apple-system,"PingFang SC",sans-serif;
+    letter-spacing:2.5px;color:rgba(215,170,180,.26);pointer-events:none;
+    transition:opacity 1.6s ease;user-select:none}
+  .sig.off{opacity:0}
+  .veil{position:fixed;inset:0;background:#05000c;display:flex;align-items:center;justify-content:center;
+    color:#8d6b78;font:13px/1.8 -apple-system,"PingFang SC",sans-serif;z-index:5}
+  .veil.off{opacity:0;pointer-events:none;transition:opacity .6s ease}
+</style>
+</head>
+<body>
+<script>
+(function(){
+  try{
+    var c=document.createElement('canvas');
+    if(!c.getContext('webgl2')){ location.replace('canvas.html'); }
+  }catch(e){ location.replace('canvas.html'); }
+})();
+</script>
+
+<canvas id="gl"></canvas>
+<div class="sig" id="sig">PARTICLE BOUQUET</div>
+<div class="veil" id="veil">正在点亮……</div>
+<script>
+(function(){
+"use strict";
+
+/* ================= 工具 ================= */
+var rnd=Math.random;
+function clamp(x,a,b){return x<a?a:(x>b?b:x);}
+function smooth(x){x=clamp(x,0,1);return x*x*(3-2*x);}
+function mix(a,b,t){return a+(b-a)*t;}
+
+/* ================= 玫瑰几何 ================= */
+var RINGS=6, UNIT=112, SEG=128;
+function ringParams(t){
+  return { t:t, count:5+Math.round(t*5),
+    R:(3+t*46)/UNIT, L:(46+t*74)*0.78/UNIT, H:(58-t*30)/UNIT,
+    tilt0:0.08+t*0.62, curl:1.55-t*0.30,
+    halfW:(20+t*34)/UNIT, cup:0.42-t*0.10, ruffle:0.10+t*0.20, angle0:t*1.15 };
+}
+function roseSamples(count){
+  var petals=[], r, i;
+  for (r=0;r<RINGS;r++){
+    var ring=ringParams(r/(RINGS-1));
+    for (i=0;i<ring.count;i++){
+      petals.push({ ring:ring,
+        ang: ring.angle0 + i*Math.PI*2/ring.count + (rnd()-0.5)*0.06,
+        phase: rnd()*6.283, wscale: 0.92+rnd()*0.16 });
+    }
+  }
+  var weights=petals.map(function(p){return p.ring.L*p.ring.halfW*p.ring.count;});
+  var total=weights.reduce(function(a,b){return a+b;},0);
+  var out=[];
+  for (var k=0;k<petals.length;k++){
+    var n=Math.max(18, Math.round(count*weights[k]/total));
+    for (var j=0;j<n;j++){
+      var u=Math.pow(rnd(),0.78);
+      var edge=rnd()<0.34;
+      var v=edge?(rnd()<0.5?-1:1)*(1-Math.pow(rnd(),3)*0.10):rnd()*2-1;
+      out.push({pk:k,u:u,v:v,edge:edge,
+        delay: petals[k].ring.t*0.17 + 0.18*u + rnd()*0.05});
+    }
+  }
+  return {petals:petals, samples:out};
+}
+function lineFor(ring, open){
+  var o=0.30+0.70*open, t0=ring.tilt0*o, curl=ring.curl*(0.25+0.75*open), L=ring.L*(0.55+0.45*open);
+  var line=new Float32Array((SEG+1)*3), rr=ring.R, yy=ring.H;
+  for (var i=0;i<=SEG;i++){
+    var u=i/SEG, phi=t0+curl*Math.pow(u,1.5);
+    line[i*3]=rr; line[i*3+1]=yy; line[i*3+2]=phi;
+    var phiN=t0+curl*Math.pow(Math.min(1,u+1/SEG),1.5);
+    rr+=L*Math.sin(phiN)/SEG; yy+=L*Math.cos(phiN)/SEG;
+  }
+  return line;
+}
+function rosePose(rs, open){
+  var lines=rs.petals.map(function(p){return lineFor(p.ring,open);});
+  var n=rs.samples.length, arr=new Float32Array(n*3);
+  for (var i=0;i<n;i++){
+    var s=rs.samples[i], petal=rs.petals[s.pk], line=lines[s.pk];
+    var fi=s.u*SEG, i0=fi|0, fr=fi-i0, i1=Math.min(SEG,i0+1);
+    var r0=line[i0*3], y0=line[i0*3+1], p0=line[i0*3+2];
+    var r1=line[i1*3], y1=line[i1*3+1], p1=line[i1*3+2];
+    var rr=r0+(r1-r0)*fr, yy=y0+(y1-y0)*fr, phi=p0+(p1-p0)*fr;
+    var u=s.u, v=s.v;
+    var hw=petal.ring.halfW*Math.sin(Math.PI*Math.pow(u,0.8))*(1-0.25*u)*petal.wscale;
+    var nOff=hw*(petal.ring.cup*(1-v*v)*(1-0.45*u)
+            + petal.ring.ruffle*v*v*u*u*(1+0.9*Math.sin(u*11+petal.phase)));
+    var rp=rr+nOff*Math.cos(phi), yp=yy-nOff*Math.sin(phi);
+    var ang=petal.ang+(v*hw)/Math.max(rp,0.05);
+    arr[i*3]=rp*Math.cos(ang); arr[i*3+1]=yp-0.55; arr[i*3+2]=rp*Math.sin(ang);
+  }
+  return arr;
+}
+
+/* ================= 花束 ================= */
+var ROSES=[
+  [ 0.00, 0.26, 0.00, 0.80,  0.3,  0.00],
+  [-0.80,-0.06,-0.10, 0.66, -0.6,  0.20],
+  [ 0.80, 0.06,-0.06, 0.66,  0.9, -0.18]
+];
+var roseSets=[];
+
+function buildBouquet(open){
+  var pos=[],bud=[],col=[],siz=[],dly=[];
+  ROSES.forEach(function(R,idx){
+    var rs=roseSets[idx]; if(!rs) return;
+    var P=rosePose(rs,open), B=rosePose(rs,0.06);
+    var tx=R[0],ty=R[1],tz=R[2],sc=R[3],ry=R[4],tilt=R[5];
+    var cy=Math.cos(ry), sy=Math.sin(ry), cx=Math.cos(tilt), sx=Math.sin(tilt);
+    for (var i=0;i<rs.samples.length;i++){
+      var s=rs.samples[i];
+      var pairs=[[P,pos],[B,bud]];
+      for (var q=0;q<2;q++){
+        var src=pairs[q][0], dst=pairs[q][1];
+        var x=src[i*3]*sc, y=src[i*3+1]*sc*1.35, z=src[i*3+2]*sc;
+        var y2=y*cx-z*sx, z2=y*sx+z*cx;
+        var x2=x*cy-z2*sy, z3=x*sy+z2*cy;
+        dst.push(x2+tx, y2+ty, z3+tz);
+      }
+      var deep=[0.44,0.08,0.17], mid=[0.92,0.36,0.50], pale=[1.0,0.86,0.90];
+      var lm=0.10+0.70*s.u;
+      var cr=mix(deep[0],mid[0],lm), cg=mix(deep[1],mid[1],lm), cb=mix(deep[2],mid[2],lm);
+      var br=0.40*Math.pow(s.u,2.2)+0.26*s.v*s.v;
+      cr=mix(cr,pale[0],br); cg=mix(cg,pale[1],br); cb=mix(cb,pale[2],br);
+      if (s.edge){ cr=mix(cr,1,0.24); cg=mix(cg,0.93,0.24); cb=mix(cb,0.95,0.24); }
+      var dim=0.72+0.28*(R[2]+0.2)/0.4;
+      col.push(cr*dim,cg*dim,cb*dim);
+      siz.push((0.9+rnd()*1.0+(s.edge?0.35:0))*(0.85+0.3*sc));
+      dly.push(s.delay);
+    }
+  });
+  return {pos:pos,bud:bud,col:col,siz:siz,dly:dly};
+}
+
+function paperPoints(n){
+  var pos=[],col=[],siz=[],dly=[];
+  for (var i=0;i<n;i++){
+    var th=rnd()*6.283, u=Math.pow(rnd(),0.72);
+    var rTop=1.16+0.06*Math.sin(th*5)+0.04*Math.sin(th*11);
+    var r=mix(0.22,rTop,u), y=mix(-0.80,0.14,u);
+    var fan=1-0.18*Math.max(0,Math.sin(th))*u;
+    pos.push(Math.cos(th)*r*fan, y, Math.sin(th)*r*0.72);
+    var t=0.35+0.65*u;
+    col.push(mix(0.62,0.98,t), mix(0.50,0.86,t), mix(0.56,0.88,t));
+    siz.push(0.6+rnd()*0.8);
+    dly.push(0.02+u*0.10+rnd()*0.05);
+  }
+  return {pos:pos,bud:pos,col:col,siz:siz,dly:dly};
+}
+
+/* ================= 文字 ================= */
+function textPoints(){
+  var TW=1400, TH=520;
+  var c=document.createElement('canvas'); c.width=TW; c.height=TH;
+  var g=c.getContext('2d');
+  g.textAlign='center'; g.textBaseline='middle';
+  g.fillStyle='#fff'; g.strokeStyle='#fff'; g.lineJoin='round'; g.lineWidth=7;
+  g.font='132px RoseBrush, "Songti SC", serif';
+  g.fillText('祝杨子墨天天开心', TW/2, 206);
+  g.strokeText('祝杨子墨天天开心', TW/2, 206);
+  g.font='92px RoseBrush, "Songti SC", serif';
+  g.fillText('—— 严小焕作', TW/2+56, 382);
+  g.strokeText('—— 严小焕作', TW/2+56, 382);
+
+  var data=g.getImageData(0,0,TW,TH).data;
+  var planeW=2.45, planeH=planeW*TH/TW;
+  var pos=[],bud=[],col=[],siz=[],dly=[];
+  var step=4;
+  for (var y=0;y<TH;y+=step){
+    for (var x=0;x<TW;x+=step){
+      if (data[(y*TW+x)*4+3] > 120){
+        var nx=x/TW-0.5, ny=0.5-y/TH;
+        pos.push(-0.15+(nx+0.5)*planeW, 0.30+ny*planeH, 0.12+(rnd()-0.5)*0.05);
+        bud.push(0,0,0);
+        var t=nx+0.5;
+        col.push(1.0, mix(0.70,0.46,t), mix(0.84,0.70,t));
+        siz.push(1.5+rnd()*1.1);
+        dly.push(0.30+t*0.35+rnd()*0.10);
+      }
+    }
+  }
+  return {pos:pos,bud:bud,col:col,siz:siz,dly:dly, TW:TW, TH:TH};
+}
+
+/* ================= 组装 ================= */
+var MOBILE = innerWidth < 820 || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+var N_ROSE = MOBILE ? 22000 : 44000;
+var N_PAPER = MOBILE ? 2200 : 4200;
+
+var totalW=ROSES.reduce(function(a,R){return a+R[3]*R[3];},0);
+ROSES.forEach(function(R,i){
+  roseSets[i]=roseSamples(Math.round(N_ROSE*(R[3]*R[3])/totalW));
+});
+var BQ=buildBouquet(1.0), BQB=buildBouquet(0.06), PP=paperPoints(N_PAPER), TX=textPoints();
+TX.bud=[];
+for (var i=0;i<TX.pos.length/3;i++){
+  TX.bud.push(-1.2+(rnd()-0.5)*1.4, (rnd()-0.5)*1.4, (rnd()-0.5)*0.9);
+}
+
+/* ================= WebGL ================= */
+var canvas=document.getElementById('gl');
+var gl=canvas.getContext('webgl2',{antialias:false,alpha:false,premultipliedAlpha:false});
+var FLOAT_RT = false;
+if (gl){
+  FLOAT_RT = !!(gl.getExtension('EXT_color_buffer_float') || gl.getExtension('EXT_color_buffer_half_float'));
+}
+if (!gl){ document.getElementById('veil').textContent='你的浏览器不支持 WebGL2'; return; }
+
+var VS=`#version 300 es
+in vec3 aPos; in vec3 aBud; in vec3 aCol; in float aSize; in float aDelay;
+uniform float uOpen,uTime,uDpr,uYaw,uPitch,uSizeMul,uAlpha;
+uniform vec2 uOffset; uniform float uScale;
+uniform mat4 uProj; uniform float uCamY, uCamZ;
+out vec3 vCol; out float vA;
+void main(){
+  float k = smoothstep(0.0,1.0,(uOpen*1.35 - aDelay*0.60)/0.40);
+  vec3 p = mix(aBud, aPos, k) * uScale;
+  p *= 1.0 + 0.005*sin(uTime*0.9 + aDelay*6.0);
+  p += vec3(uOffset, 0.0);
+
+  float cy=cos(uYaw), sy=sin(uYaw), cp=cos(uPitch), sp=sin(uPitch);
+  vec3 q;
+  q.x = p.x*cy - p.z*sy;
+  q.z = p.x*sy + p.z*cy;
+  q.y = p.y*cp - q.z*sp;
+  q.z = p.y*sp + q.z*cp;
+
+  vec3 viewPos = vec3(q.x, q.y - uCamY, q.z - uCamZ);
+  gl_Position = uProj * vec4(viewPos, 1.0);
+  gl_PointSize = clamp(aSize*uSizeMul*uDpr*7.0/max(-viewPos.z,0.6), 0.5, 28.0);
+  vCol = aCol;
+  vA = uAlpha * (0.16 + 0.50*k) * clamp(1.35 + viewPos.z*0.18, 0.5, 1.15);
+}`;
+
+var FS=`#version 300 es
+precision highp float;
+in vec3 vCol; in float vA;
+out vec4 o;
+void main(){
+  vec2 d = gl_PointCoord - 0.5;
+  float r = length(d);
+  if (r > 0.5) discard;
+  float core = pow(1.0 - r*2.0, 3.0);
+  float halo = pow(1.0 - r*2.0, 1.2) * 0.07;
+  o = vec4(vCol * (0.65 + core*0.95), (core*0.85 + halo) * vA);
+}`;
+
+var QUAD_VS=`#version 300 es
+in vec2 aX; out vec2 vUv;
+void main(){ vUv = aX*0.5+0.5; gl_Position = vec4(aX,0.0,1.0); }`;
+
+var BRIGHT_FS=`#version 300 es
+precision highp float;
+in vec2 vUv; out vec4 o;
+uniform sampler2D uTex; uniform float uThr;
+void main(){
+  vec3 c = texture(uTex, vUv).rgb;
+  float l = max(max(c.r,c.g),c.b);
+  float k = smoothstep(uThr, uThr+0.35, l);
+  o = vec4(c*k, 1.0);
+}`;
+
+var BLUR_FS=`#version 300 es
+precision highp float;
+in vec2 vUv; out vec4 o;
+uniform sampler2D uTex; uniform vec2 uDir;
+void main(){
+  vec3 s = texture(uTex,vUv).rgb * 0.227;
+  s += (texture(uTex,vUv+uDir*1.3846).rgb + texture(uTex,vUv-uDir*1.3846).rgb) * 0.316;
+  s += (texture(uTex,vUv+uDir*3.2308).rgb + texture(uTex,vUv-uDir*3.2308).rgb) * 0.070;
+  o = vec4(s,1.0);
+}`;
+
+var ADD_FS=`#version 300 es
+precision highp float;
+in vec2 vUv; out vec4 o;
+uniform sampler2D uScene, uBloom; uniform float uStr;
+void main(){
+  vec3 c = texture(uScene,vUv).rgb + texture(uBloom,vUv).rgb * uStr;
+  o = vec4(c,1.0);
+}`;
+
+function sh(type, src){
+  var s=gl.createShader(type); gl.shaderSource(s,src); gl.compileShader(s);
+  if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)) console.error(gl.getShaderInfoLog(s));
+  return s;
+}
+function prog(vs,fs){
+  var p=gl.createProgram();
+  gl.attachShader(p,sh(gl.VERTEX_SHADER,vs)); gl.attachShader(p,sh(gl.FRAGMENT_SHADER,fs));
+  gl.linkProgram(p);
+  if(!gl.getProgramParameter(p,gl.LINK_STATUS)) console.error(gl.getProgramInfoLog(p));
+  return p;
+}
+var P_POINT=prog(VS,FS), P_BRIGHT=prog(QUAD_VS,BRIGHT_FS), P_BLUR=prog(QUAD_VS,BLUR_FS), P_ADD=prog(QUAD_VS,ADD_FS);
+
+/* 全屏四边形 */
+var quad=gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER,quad);
+gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1, 3,-1, -1,3]),gl.STATIC_DRAW);
+
+/* 几何缓冲 */
+function makeObj(d){
+  var vao=gl.createVertexArray(); gl.bindVertexArray(vao);
+  function attr(name, arr, size){
+    var b=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,b);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(arr),gl.STATIC_DRAW);
+    var loc=gl.getAttribLocation(P_POINT,name);
+    if(loc>=0){ gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc,size,gl.FLOAT,false,0,0); }
+  }
+  attr('aPos', d.pos, 3); attr('aBud', d.bud, 3); attr('aCol', d.col, 3);
+  attr('aSize', d.siz, 1); attr('aDelay', d.dly, 1);
+  gl.bindVertexArray(null);
+  return {vao:vao, n:d.pos.length/3};
+}
+var objBouquet=makeObj(BQ), objPaper=makeObj(PP), objText=makeObj(TX);
+
+/* FBO */
+var RT={};
+function makeRT(w,h){
+  var tex=gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D,tex);
+  if (FLOAT_RT) gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA16F,w,h,0,gl.RGBA,gl.HALF_FLOAT,null);
+  else gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA8,w,h,0,gl.RGBA,gl.UNSIGNED_BYTE,null);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
+  var fb=gl.createFramebuffer();
+  gl.bindFramebuffer(gl.FRAMEBUFFER,fb);
+  gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.COLOR_ATTACHMENT0,gl.TEXTURE_2D,tex,0);
+  return {fb:fb,tex:tex,w:w,h:h};
+}
+
+var W=0,H=0,DPR=1;
+function resize(){
+  DPR=Math.min(devicePixelRatio||1, MOBILE?1.5:2);
+  W=canvas.clientWidth; H=canvas.clientHeight;
+  canvas.width=Math.round(W*DPR); canvas.height=Math.round(H*DPR);
+  var hw=Math.max(2,Math.round(canvas.width/3)), hh=Math.max(2,Math.round(canvas.height/3));
+  ['scene','bright','blurA','blurB'].forEach(function(k){ if(RT[k]){gl.deleteTexture(RT[k].tex);gl.deleteFramebuffer(RT[k].fb);} });
+  RT.scene=makeRT(canvas.width,canvas.height);
+  RT.bright=makeRT(hw,hh); RT.blurA=makeRT(hw,hh); RT.blurB=makeRT(hw,hh);
+  layout();
+}
+addEventListener('resize',resize);
+
+function persp(fovy,aspect,near,far){
+  var f=1/Math.tan(fovy/2);
+  return new Float32Array([f/aspect,0,0,0, 0,f,0,0, 0,0,(far+near)/(near-far),-1, 0,0,2*far*near/(near-far),0]);
+}
+
+/* ================= 布局 ================= */
+var LAY={bx:-1.15, by:0, bs:1, px:-1.15, py:0, ps:1, tx:0, ty:0, ts:1,
+         camY:0.55, camZ:5.3};
+function layout(){
+  var portrait = H > W*1.08;
+  if (portrait){
+    LAY.bx=-0.04; LAY.by=1.05; LAY.bs=0.52;
+    LAY.px=-0.04; LAY.py=1.05; LAY.ps=0.52;
+    LAY.tx=-0.62; LAY.ty=-1.05; LAY.ts=0.58;
+    LAY.camY=0.05; LAY.camZ=6.2;
+  } else {
+    LAY.bx=-1.15; LAY.by=0; LAY.bs=1;
+    LAY.px=-1.15; LAY.py=0; LAY.ps=1;
+    LAY.tx=0; LAY.ty=0; LAY.ts=1;
+    LAY.camY=0.55; LAY.camZ=5.3;
+  }
+}
+
+/* ================= 渲染 ================= */
+var PERIOD=26;
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var T0=performance.now()/1000;
+
+function openAt(p){
+  if (p<0.16) return smooth(p/0.16);
+  if (p<0.80) return 1;
+  if (p<0.96) return 1-smooth((p-0.80)/0.16)*0.94;
+  return 0.06;
+}
+
+function drawQuad(progObj){
+  gl.bindBuffer(gl.ARRAY_BUFFER,quad);
+  var loc=gl.getAttribLocation(progObj,'aX');
+  gl.enableVertexAttribArray(loc);
+  gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  gl.drawArrays(gl.TRIANGLES,0,3);
+}
+
+function render(now){
+  var t=(now||performance.now())/1000 - T0;
+  var open = reduce?1:openAt((t%PERIOD)/PERIOD);
+  var yaw = reduce?0:0.20*Math.sin(t*0.11);
+  var pitch = LAY.pitch !== undefined ? LAY.pitch : 0.05;
+  pitch = (reduce?0:0.05) + (reduce?0:0.03*Math.sin(t*0.15));
+
+  var proj=persp(38*Math.PI/180, W/H, 0.1, 40);
+
+  /* --- 场景 → sceneRT --- */
+  gl.bindFramebuffer(gl.FRAMEBUFFER, RT.scene.fb);
+  gl.viewport(0,0,RT.scene.w,RT.scene.h);
+  gl.clearColor(0.008,0.0,0.024,1);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+  gl.enable(gl.BLEND);
+  gl.blendFunc(gl.ONE, gl.ONE);
+  gl.disable(gl.DEPTH_TEST);
+
+  gl.useProgram(P_POINT);
+  gl.uniformMatrix4fv(gl.getUniformLocation(P_POINT,'uProj'),false,proj);
+  gl.uniform1f(gl.getUniformLocation(P_POINT,'uCamY'),LAY.camY);
+  gl.uniform1f(gl.getUniformLocation(P_POINT,'uCamZ'),LAY.camZ);
+  gl.uniform1f(gl.getUniformLocation(P_POINT,'uOpen'),open);
+  gl.uniform1f(gl.getUniformLocation(P_POINT,'uTime'),t);
+  gl.uniform1f(gl.getUniformLocation(P_POINT,'uDpr'),DPR);
+  gl.uniform1f(gl.getUniformLocation(P_POINT,'uYaw'),yaw);
+  gl.uniform1f(gl.getUniformLocation(P_POINT,'uPitch'),pitch);
+
+  function drawObj(o, ox, oy, sc, sizeMul, alpha){
+    gl.uniform2f(gl.getUniformLocation(P_POINT,'uOffset'),ox,oy);
+    gl.uniform1f(gl.getUniformLocation(P_POINT,'uScale'),sc);
+    gl.uniform1f(gl.getUniformLocation(P_POINT,'uSizeMul'),sizeMul);
+    gl.uniform1f(gl.getUniformLocation(P_POINT,'uAlpha'),alpha);
+    gl.bindVertexArray(o.vao);
+    gl.drawArrays(gl.POINTS,0,o.n);
+  }
+  drawObj(objBouquet, LAY.bx, LAY.by, LAY.bs, 1.0, 0.42);
+  drawObj(objPaper,   LAY.px, LAY.py, LAY.ps, 1.0, 0.14);
+  drawObj(objText,    LAY.tx, LAY.ty, LAY.ts, 1.15, 0.95);
+  gl.bindVertexArray(null);
+
+  /* --- 亮部 + 模糊 --- */
+  gl.disable(gl.BLEND);
+  gl.bindFramebuffer(gl.FRAMEBUFFER, RT.bright.fb);
+  gl.viewport(0,0,RT.bright.w,RT.bright.h);
+  gl.useProgram(P_BRIGHT);
+  gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D,RT.scene.tex);
+  gl.uniform1i(gl.getUniformLocation(P_BRIGHT,'uTex'),0);
+  gl.uniform1f(gl.getUniformLocation(P_BRIGHT,'uThr'),0.78);
+  drawQuad(P_BRIGHT);
+
+  gl.useProgram(P_BLUR);
+  gl.bindFramebuffer(gl.FRAMEBUFFER, RT.blurA.fb);
+  gl.bindTexture(gl.TEXTURE_2D,RT.bright.tex);
+  gl.uniform1i(gl.getUniformLocation(P_BLUR,'uTex'),0);
+  gl.uniform2f(gl.getUniformLocation(P_BLUR,'uDir'), 1.0/RT.bright.w, 0);
+  drawQuad(P_BLUR);
+
+  gl.bindFramebuffer(gl.FRAMEBUFFER, RT.blurB.fb);
+  gl.bindTexture(gl.TEXTURE_2D,RT.blurA.tex);
+  gl.uniform2f(gl.getUniformLocation(P_BLUR,'uDir'), 0, 1.0/RT.bright.h);
+  drawQuad(P_BLUR);
+
+  /* --- 合成 --- */
+  gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+  gl.viewport(0,0,canvas.width,canvas.height);
+  gl.useProgram(P_ADD);
+  gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D,RT.scene.tex);
+  gl.uniform1i(gl.getUniformLocation(P_ADD,'uScene'),0);
+  gl.activeTexture(gl.TEXTURE1); gl.bindTexture(gl.TEXTURE_2D,RT.blurB.tex);
+  gl.uniform1i(gl.getUniformLocation(P_ADD,'uBloom'),1);
+  gl.uniform1f(gl.getUniformLocation(P_ADD,'uStr'),0.38);
+  drawQuad(P_ADD);
+
+  requestAnimationFrame(render);
+}
+
+/* ================= 启动 ================= */
+function boot(){
+  resize();
+  document.getElementById('veil').classList.add('off');
+  setTimeout(function(){ var s=document.getElementById('sig'); if(s) s.classList.add('off'); },7000);
+  requestAnimationFrame(render);
+}
+if (document.fonts && document.fonts.load){
+  document.fonts.load('132px RoseBrush').then(function(){ return document.fonts.ready; }).then(boot, boot);
+} else boot();
+
+})();
+</script>
+</body>
+</html>
